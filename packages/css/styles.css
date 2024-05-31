@@ -650,6 +650,51 @@ img {
 .qualification__button.qualification__active {
   color: var(--first-color);
 }
+/*==================== HORIZONTAL SCROLLBAR ====================*/
+body {
+  margin: 0;
+}
+
+.scroll {
+  position: relative;
+  width: 100vw;
+  background-color: $boxify-bg-light-dark; /* Replace with your desired color */
+  overflow: hidden; /* Only if you want to hide overflowing content */
+  z-index: 1;
+  margin:2;
+  padding: 0;
+}
+
+.m-scroll {
+  overflow: hidden;
+  height: 100%;
+  white-space: nowrap;
+  animation: scrollText 17s infinite linear;
+  margin: 0 auto; /* Center the container horizontally */
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+}
+.m-scroll img {
+  margin-right: 200px; /* Adjust this value to the desired space between images */
+}
+
+span {
+  display: inline-block;
+  margin-right: 20px; /* Adjust as needed */
+  padding: 0;
+  color: white;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(50%); /* Start from the middle of the container */
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
 /*==================== SERVICES ====================*/
 .services__container {

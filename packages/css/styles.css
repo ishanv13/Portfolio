@@ -517,39 +517,39 @@ img {
 }
 
 .skills__html {
-  width: 90%;
+  width: 70%;
 }
 
-.skills__css {
+.skills__cpp {
+  width: 65%;
+}
+
+.skills__dsa {
+  width: 65%;
+}
+
+.skills__excel {
+  width: 40%;
+}
+
+.skills__python {
   width: 80%;
 }
 
 .skills__js {
-  width: 60%;
-}
-
-.skills__wordpress {
-  width: 70%;
-}
-
-.skills__python {
-  width: 60%;
-}
-
-.skills__tab {
-  width: 70%;
+  width: 45%;
 }
 
 .skills__sql {
-  width: 50%;
+  width: 65%;
 }
 
-.skills__google {
-  width: 70%;
+.skills__rlan {
+  width: 90%;
 }
 
-.skills__bank {
-  width: 80%;
+.skills__powerbi {
+  width: 55%;
 }
 
 .skills__google {

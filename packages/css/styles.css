@@ -549,6 +549,10 @@ img {
   width: 80%;
 }
 
+.skills__prompt {
+  width: 75%;
+}
+
 .skills__rlan {
   width: 90%;
 }

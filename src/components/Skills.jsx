@@ -19,7 +19,23 @@ const SkillBar = ({ name, percentage }) => (
   </div>
 )
 
-const SkillCategory = ({ icon, title, skills }) => {
+const TagCloud = ({ tags }) => (
+  <div className="flex flex-wrap gap-2 pt-2">
+    {tags.map((tag) => (
+      <motion.span
+        key={tag}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="text-xs bg-primary/10 text-primary px-3 py-1.5 rounded-full font-medium border border-primary/20 hover:bg-primary/20 transition-colors"
+      >
+        {tag}
+      </motion.span>
+    ))}
+  </div>
+)
+
+const SkillCategory = ({ icon, title, skills, tags }) => {
   const [open, setOpen] = useState(true)
 
   return (
@@ -52,9 +68,10 @@ const SkillCategory = ({ icon, title, skills }) => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden pt-4"
           >
-            {skills.map((skill) => (
+            {skills && skills.map((skill) => (
               <SkillBar key={skill.name} {...skill} />
             ))}
+            {tags && <TagCloud tags={tags} />}
           </motion.div>
         )}
       </AnimatePresence>
@@ -95,6 +112,22 @@ const categories = [
       { name: 'Git & Version Control', percentage: 75 },
     ],
   },
+  {
+    icon: '🤝',
+    title: 'Soft Skills & Operations',
+    tags: [
+      'Leadership', 'Team Management', 'Strong Communication', 'Customer Service',
+      'Client Engagement', 'Sales Strategies', 'Event Management', 'Crowd Management',
+      'Warehouse Operations', 'POS / Till Handling', 'Manual Handling',
+      'Decisive Under Pressure', 'Fast Learner', 'Reliability', 'Teamwork',
+      'Interpersonal Skills', 'Smart Working',
+    ],
+  },
+]
+
+const languageData = [
+  { lang: 'English', level: 'Fluent', detail: 'IELTS Band 7', flag: '🇬🇧' },
+  { lang: 'Hindi', level: 'Fluent', detail: 'Native', flag: '🇮🇳' },
 ]
 
 const Skills = () => {
@@ -111,7 +144,7 @@ const Skills = () => {
           <h2 className="text-4xl font-bold">Skills</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-10">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.title}
@@ -124,6 +157,30 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Languages */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-2xl">🌐</span>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">Languages</h3>
+          </div>
+          <div className="flex gap-6 flex-wrap">
+            {languageData.map((l) => (
+              <div key={l.lang} className="flex items-center gap-3">
+                <span className="text-3xl">{l.flag}</span>
+                <div>
+                  <p className="font-semibold text-gray-800 dark:text-gray-100">{l.lang}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{l.level} · {l.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )

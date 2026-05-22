@@ -65,24 +65,34 @@ const SkillCategory = ({ icon, title, skills }) => {
 const categories = [
   {
     icon: '💻',
-    title: 'Development',
+    title: 'Programming & Data',
     skills: [
-      { name: 'Python', percentage: 80 },
-      { name: 'SQL', percentage: 80 },
+      { name: 'Python (pandas, NumPy, scikit-learn)', percentage: 85 },
+      { name: 'SQL & PostgreSQL', percentage: 85 },
+      { name: 'R Language', percentage: 90 },
       { name: 'HTML / CSS', percentage: 70 },
-      { name: 'C / C++', percentage: 65 },
-      { name: 'Data Structures & Algorithms', percentage: 65 },
-      { name: 'JavaScript', percentage: 45 },
+      { name: 'C / C++', percentage: 60 },
     ],
   },
   {
     icon: '📊',
-    title: 'Analytics',
+    title: 'Analytics & BI',
     skills: [
-      { name: 'R Language', percentage: 90 },
-      { name: 'Prompt Engineering', percentage: 75 },
-      { name: 'Power BI', percentage: 55 },
-      { name: 'Excel', percentage: 40 },
+      { name: 'Power BI (with DAX)', percentage: 70 },
+      { name: 'Statistical Methods & A/B Testing', percentage: 80 },
+      { name: 'Machine Learning (classification, regression)', percentage: 75 },
+      { name: 'Tableau', percentage: 60 },
+      { name: 'Excel', percentage: 65 },
+    ],
+  },
+  {
+    icon: '🤖',
+    title: 'AI & Engineering',
+    skills: [
+      { name: 'Prompt Engineering & Generative AI', percentage: 80 },
+      { name: 'NLP & RAG Pipelines', percentage: 65 },
+      { name: 'REST APIs & Data Pipelines', percentage: 75 },
+      { name: 'Git & Version Control', percentage: 75 },
     ],
   },
 ]
@@ -97,11 +107,11 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="section-subtitle mb-2">What I Know</p>
+          <p className="section-subtitle mb-2">What I Work With</p>
           <h2 className="text-4xl font-bold">Skills</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.title}

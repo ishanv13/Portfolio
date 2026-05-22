@@ -4,8 +4,8 @@ const contactInfo = [
   {
     icon: '📞',
     title: 'Call Me',
-    value: '+91 8127473200',
-    href: 'tel:+918127473200',
+    value: '+44 7553 780832',
+    href: 'tel:+447553780832',
   },
   {
     icon: '✉️',
@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: '📍',
     title: 'Location',
-    value: 'Lucknow, India',
+    value: 'Liverpool, UK',
     href: null,
   },
 ]
@@ -26,7 +26,7 @@ const inputClass =
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800/30">
+    <section id="contact" className="py-20">
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-14">
-          {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -75,7 +74,6 @@ const Contact = () => {
             ))}
           </motion.div>
 
-          {/* Contact form */}
           <motion.form
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

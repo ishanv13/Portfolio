@@ -15,14 +15,14 @@ const education = [
   },
   {
     title: "Bachelor's Degree",
-    institution: 'B.Tech CSE (IT) · SRM Institute of Science & Technology',
+    institution: 'B.Tech CSE · SRM Institute of Science & Technology · First Class, 9.2/10 CGPA',
     period: '2020 – 2024',
     icon: '🎓',
   },
   {
     title: "Master's Degree",
-    institution: 'MSc Business Analytics · Warwick Business School',
-    period: '2024 – 2025',
+    institution: 'MSc Business Analytics · Warwick Business School · Merit',
+    period: 'Sep 2024 – Sep 2025',
     icon: '🏛️',
   },
 ]
@@ -38,11 +38,10 @@ const Qualification = () => {
           className="text-center mb-14"
         >
           <p className="section-subtitle mb-2">My Journey</p>
-          <h2 className="text-4xl font-bold">Qualification</h2>
+          <h2 className="text-4xl font-bold">Education</h2>
         </motion.div>
 
         <div className="relative">
-          {/* Vertical line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-primary/25 -translate-x-1/2 hidden md:block" />
 
           <div className="space-y-10">
@@ -57,7 +56,6 @@ const Qualification = () => {
                   transition={{ delay: i * 0.12 }}
                   className="flex items-center gap-6 md:gap-0"
                 >
-                  {/* Left card (even) or spacer (odd) */}
                   <div className={`flex-1 ${isLeft ? 'md:pr-10' : 'hidden md:block'}`}>
                     {isLeft && (
                       <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 md:text-right hover:border-primary/30 transition-colors">
@@ -74,12 +72,10 @@ const Qualification = () => {
                     )}
                   </div>
 
-                  {/* Centre icon */}
                   <div className="relative z-10 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white text-xl shadow-md shadow-primary/30 flex-shrink-0">
                     {item.icon}
                   </div>
 
-                  {/* Right card (odd) or spacer (even) */}
                   <div className={`flex-1 ${!isLeft ? 'md:pl-10' : 'hidden md:block'}`}>
                     {!isLeft && (
                       <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/30 transition-colors">
@@ -96,7 +92,7 @@ const Qualification = () => {
                     )}
                   </div>
 
-                  {/* Mobile: full-width card */}
+                  {/* Mobile card */}
                   <div className="flex-1 md:hidden">
                     <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700">
                       <div className="text-2xl mb-2">{item.icon}</div>

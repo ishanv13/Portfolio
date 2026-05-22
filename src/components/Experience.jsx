@@ -39,7 +39,7 @@ const jobs = [
     role: 'Conference Assistant',
     company: 'Warwick Conferences',
     location: 'Coventry, UK',
-    period: 'Jul 2025 – Present',
+    period: 'Jul 2025 – Dec 2025',
     icon: '🎙️',
     bullets: [
       'Supported conference operations across multiple venues — room setups, AV equipment handling, on-site client assistance',

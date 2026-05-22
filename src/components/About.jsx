@@ -69,7 +69,7 @@ const About = () => {
 
             <div className="flex gap-4 flex-wrap">
               <motion.a
-                href="/pdf/Ishan's CV.pdf"
+                href="/pdf/Ishan_CV_Analyst.pdf"
                 download
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-alt text-white px-7 py-3.5 rounded-xl font-medium transition-all shadow-md shadow-primary/20"
                 whileHover={{ scale: 1.05 }}

@@ -10,8 +10,8 @@ const contactInfo = [
   {
     icon: '✉️',
     title: 'Email',
-    value: 'ishanv2003@gmail.com',
-    href: 'mailto:ishanv2003@gmail.com',
+    value: 'ishan.verma.xx@gmail.com',
+    href: 'mailto:ishan.verma.xx@gmail.com',
   },
   {
     icon: '📍',

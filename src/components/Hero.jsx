@@ -54,7 +54,7 @@ const Hero = () => {
               transition={{ delay: 0.8 }}
               className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed"
             >
-              MSc Business Analytics graduate (Warwick) · Turning complex data into decisions people can act on.
+              MSc Business Analytics graduate (Warwick) · Turning complex data into decisions people can act on, with a passion for AI.
             </motion.p>
 
             <motion.div

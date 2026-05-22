@@ -51,7 +51,7 @@ const projects = [
       'Analysed company KPIs across 28 simulated quarters to identify drivers behind a multi-year revenue downturn. Designed and led a recovery strategy that grew simulated revenue from $1.5B to $8.2B — +25% product competitiveness, +15% market share, +20% overall performance.',
     tags: ['Data Analysis', 'KPI Tracking', 'Strategy', 'Excel'],
     github: null,
-    live: null,
+    live: 'https://drive.google.com/file/d/1kLWepIUkvTanyeAEcBC_DrcthclbvsWQ/view?usp=sharing',
     featured: false,
     icon: '💼',
     date: 'May 2025',
@@ -62,18 +62,18 @@ const projects = [
       'Designed a normalised data schema and executed complex SQL queries for event ticketing system analysis. Modelled relationships between events, venues, attendees, and transactions to support business intelligence reporting.',
     tags: ['SQL', 'Data Modelling', 'Database Design', 'Business Intelligence'],
     github: null,
-    live: null,
+    live: 'https://drive.google.com/file/d/1Asbp-cPStTTUhd0c3KzyvqZb8KWMS-bL/view?usp=sharing',
     featured: false,
     icon: '🎟️',
     date: 'Mar 2025',
   },
   {
-    title: 'On-Demand Delivery Platform – Operational Analysis',
+    title: 'Dunzo – On-Demand Delivery Platform Analysis',
     description:
-      "Comprehensive analysis of a delivery company's 8-year trajectory using 20+ data sources. Identified 5 critical operational failure drivers; produced actionable recommendations on cost structure, rider engagement, and sustainable growth.",
+      "Comprehensive analysis of Dunzo's 8-year trajectory using 20+ data sources. Identified 5 critical operational failure drivers; produced actionable recommendations on cost structure, rider engagement, and sustainable growth.",
     tags: ['Data Analysis', 'Operations', 'Business Analysis', 'Reporting'],
     github: null,
-    live: null,
+    live: 'https://drive.google.com/file/d/182i5cTUOwkfS1fIyU7NhWuFzOHEd3OAw/view?usp=sharing',
     featured: false,
     icon: '🚚',
     date: 'Mar 2025',
@@ -84,7 +84,7 @@ const projects = [
       'Head of Technology for an MVP platform connecting students with local residents for household services. Designed subscription model, payment integration, provider verification, and quality control systems.',
     tags: ['Product Design', 'MVP', 'Platform Architecture', 'Tech Lead'],
     github: null,
-    live: null,
+    live: 'https://drive.google.com/file/d/1j6KNhGwGZog8PqOpb6oysUnCJGXhYWWV/view?usp=sharing',
     featured: false,
     icon: '🏠',
     date: '2025',
@@ -137,16 +137,28 @@ const ProjectCard = ({ project, index }) => (
       ))}
     </div>
 
-    {project.github && (
-      <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-alt font-medium transition-colors"
-      >
-        💻 GitHub →
-      </a>
-    )}
+    <div className="flex gap-4">
+      {project.github && (
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-alt font-medium transition-colors"
+        >
+          💻 GitHub →
+        </a>
+      )}
+      {project.live && (
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-alt font-medium transition-colors"
+        >
+          🔗 View Report →
+        </a>
+      )}
+    </div>
   </motion.div>
 )
 

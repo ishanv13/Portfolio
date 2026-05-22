@@ -30,7 +30,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-primary-alt/10 rounded-3xl" />
               <img
-                src="/images/ishanimg1.jpg"
+                src="/images/ishanbody.jpeg"
                 alt="Ishan Verma"
                 className="relative rounded-2xl shadow-xl w-full max-w-sm object-cover"
               />

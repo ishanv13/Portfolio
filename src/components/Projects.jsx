@@ -4,62 +4,90 @@ const projects = [
   {
     title: 'UK Graduate Job Market Intelligence Platform',
     description:
-      'Fully automated end-to-end data pipeline collecting live UK analyst job postings from Adzuna and Reed APIs. Includes linear regression salary prediction, regex-based skill extraction, composite regional opportunity scoring, time series trend analysis, and a four-page interactive Power BI dashboard.',
+      'Fully automated end-to-end pipeline collecting 10,000+ live UK job postings via Adzuna and Reed APIs. Includes linear regression salary prediction, regex-based skill extraction, composite regional opportunity scoring, and a four-page interactive Power BI dashboard with regional heatmap.',
     tags: ['Python', 'PostgreSQL', 'Power BI', 'scikit-learn', 'REST APIs', 'DAX', 'NLTK'],
     github: 'https://github.com/ishanv13/UK-job-market-analysis',
     live: null,
     featured: true,
     icon: '📊',
+    date: 'Apr 2025',
   },
   {
-    title: 'Business Simulation – Data-Driven Strategy',
+    title: 'NHS Healthcare Assistant – AI Solution',
     description:
-      'Analysed company KPIs across 28 simulated quarters to identify drivers behind a multi-year revenue downturn. Designed and led a recovery strategy that grew simulated revenue from $1.5B to $8.2B, improving product competitiveness (+25%), market share (+15%), and overall performance (+20%).',
-    tags: ['Data Analysis', 'KPI Tracking', 'Strategy', 'Excel'],
-    github: null,
+      'AI-powered healthcare assistant that reduced manual review workload by 70% and achieved 95% accuracy. Built using NLP and LLM tooling with a Retrieval-Augmented Generation (RAG) pipeline to surface relevant NHS information from natural language queries.',
+    tags: ['Python', 'NLP', 'RAG', 'LLM', 'Generative AI'],
+    github: 'https://github.com/ishanv13/NHS-Healthcare-Assistant',
     live: null,
     featured: false,
-    icon: '💼',
+    icon: '🏥',
+    date: '2025',
   },
   {
     title: 'Customer Behaviour Analytics – Predictive Modelling',
     description:
-      'End-to-end analytics project following CRISP-DM methodology. Evaluated multiple classification models against business performance metrics and translated model outputs into commercial recommendations through evaluation dashboards.',
+      'End-to-end analytics project following CRISP-DM methodology for e-commerce review prediction. Evaluated multiple classification models against business performance metrics and translated outputs into commercial recommendations.',
     tags: ['Python', 'scikit-learn', 'CRISP-DM', 'Classification', 'pandas'],
-    github: null,
+    github: 'https://github.com/ishanv13/Nile-eCommerce-Review-Prediction',
     live: null,
     featured: false,
-    icon: '🤖',
+    icon: '🛒',
+    date: 'Jan–Feb 2025',
   },
   {
     title: 'Loan Approval Model Evaluation',
     description:
       'Designed and executed an A/B experiment comparing a new predictive model against an existing baseline using R. Ran t-tests and recall analyses; produced data-driven recommendations to reduce financial risk and improve model accuracy.',
     tags: ['R', 'A/B Testing', 'Hypothesis Testing', 'Statistical Analysis'],
-    github: null,
+    github: 'https://github.com/ishanv13/LoanApprovalModel_EffectivenessAnalysis',
     live: null,
     featured: false,
     icon: '🔬',
+    date: 'Feb 2025',
   },
   {
-    title: 'NHS RAG Assistant',
+    title: 'Business Simulation – Data-Driven Strategy',
     description:
-      'Built a Retrieval-Augmented Generation (RAG) assistant using NLP and LLM tooling, designed to surface relevant NHS information in response to natural language queries.',
-    tags: ['Python', 'NLP', 'RAG', 'LLM', 'Generative AI'],
+      'Analysed company KPIs across 28 simulated quarters to identify drivers behind a multi-year revenue downturn. Designed and led a recovery strategy that grew simulated revenue from $1.5B to $8.2B — +25% product competitiveness, +15% market share, +20% overall performance.',
+    tags: ['Data Analysis', 'KPI Tracking', 'Strategy', 'Excel'],
     github: null,
     live: null,
     featured: false,
-    icon: '🏥',
+    icon: '💼',
+    date: 'May 2025',
   },
   {
-    title: 'On-Demand Delivery Platform Analysis',
+    title: 'EventsGo – Ticketing Platform Analysis',
     description:
-      'Comprehensive analysis of a delivery company\'s 8-year trajectory using 20+ data sources. Identified 5 critical operational failure drivers; produced actionable recommendations on cost structure, rider engagement, and sustainable growth.',
+      'Designed a normalised data schema and executed complex SQL queries for event ticketing system analysis. Modelled relationships between events, venues, attendees, and transactions to support business intelligence reporting.',
+    tags: ['SQL', 'Data Modelling', 'Database Design', 'Business Intelligence'],
+    github: null,
+    live: null,
+    featured: false,
+    icon: '🎟️',
+    date: 'Mar 2025',
+  },
+  {
+    title: 'On-Demand Delivery Platform – Operational Analysis',
+    description:
+      "Comprehensive analysis of a delivery company's 8-year trajectory using 20+ data sources. Identified 5 critical operational failure drivers; produced actionable recommendations on cost structure, rider engagement, and sustainable growth.",
     tags: ['Data Analysis', 'Operations', 'Business Analysis', 'Reporting'],
     github: null,
     live: null,
     featured: false,
     icon: '🚚',
+    date: 'Mar 2025',
+  },
+  {
+    title: 'Homely – Community Service Platform',
+    description:
+      'Head of Technology for an MVP platform connecting students with local residents for household services. Designed subscription model, payment integration, provider verification, and quality control systems.',
+    tags: ['Product Design', 'MVP', 'Platform Architecture', 'Tech Lead'],
+    github: null,
+    live: null,
+    featured: false,
+    icon: '🏠',
+    date: '2025',
   },
 ]
 
@@ -74,18 +102,25 @@ const ProjectCard = ({ project, index }) => (
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ delay: index * 0.08 }}
+    transition={{ delay: index * 0.07 }}
     className={`bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-md transition-all flex flex-col ${
-      project.featured ? 'md:col-span-2 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent' : ''
+      project.featured
+        ? 'md:col-span-2 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent dark:from-primary/10'
+        : ''
     }`}
   >
     <div className="flex items-start justify-between mb-3">
       <span className="text-3xl">{project.icon}</span>
-      {project.featured && (
-        <span className="text-xs bg-primary text-white px-2.5 py-1 rounded-full font-medium">
-          ⭐ Featured
-        </span>
-      )}
+      <div className="flex gap-2 items-center">
+        {project.date && (
+          <span className="text-xs text-gray-400 dark:text-gray-500">{project.date}</span>
+        )}
+        {project.featured && (
+          <span className="text-xs bg-primary text-white px-2.5 py-1 rounded-full font-medium">
+            ⭐ Featured
+          </span>
+        )}
+      </div>
     </div>
 
     <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">
@@ -102,28 +137,16 @@ const ProjectCard = ({ project, index }) => (
       ))}
     </div>
 
-    <div className="flex gap-3">
-      {project.github && (
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-alt font-medium transition-colors"
-        >
-          💻 GitHub
-        </a>
-      )}
-      {project.live && (
-        <a
-          href={project.live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-alt font-medium transition-colors"
-        >
-          🔗 Live Demo
-        </a>
-      )}
-    </div>
+    {project.github && (
+      <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-alt font-medium transition-colors"
+      >
+        💻 GitHub →
+      </a>
+    )}
   </motion.div>
 )
 

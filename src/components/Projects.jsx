@@ -19,7 +19,7 @@ const projects = [
     tags: ['Claude Code', 'Python', 'AI Agents', 'Anthropic SDK', 'Notion API', 'Git Automation', 'pandoc / XeLaTeX'],
     github: null,
     live: null,
-    featured: false,
+    featured: true,
     icon: '🎪',
     date: '2026 – Present',
   },

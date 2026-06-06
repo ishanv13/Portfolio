@@ -13,6 +13,17 @@ const projects = [
     date: 'Apr 2025',
   },
   {
+    title: 'KRATE – AI-Operated Startup (Co-Founder)',
+    description:
+      'Co-founded KRATE, a UK rave and festival accessories kit brand (summer 2026 launch). Designed and deployed a CEO-orchestrated AI agent organisation using Claude Code — 7 specialist department subagents (Brand, Marketing, Product, Legal, Finance, Ops, Tech) each with independent mandates, tools, and deliverable standards. CEO orchestration layer reads a live task list, dispatches tasks in parallel, verifies deliverables before marking complete, and produces board-level summaries. Agents shipped 11 business deliverables in a single session: UK IPO trademark pre-check, kit pricing model (48% gross margins), full packaging spec, DJ outreach playbook, ecommerce requirements, and more. Infrastructure: Git auto-commit Stop hook, Notion task-sync pipeline, and pandoc + XeLaTeX branded PDF generation system.',
+    tags: ['Claude Code', 'Python', 'AI Agents', 'Anthropic SDK', 'Notion API', 'Git Automation', 'pandoc / XeLaTeX'],
+    github: null,
+    live: null,
+    featured: false,
+    icon: '🎪',
+    date: '2026 – Present',
+  },
+  {
     title: 'NHS Healthcare Assistant – AI Solution',
     description:
       'AI-powered healthcare assistant that reduced manual review workload by 70% and achieved 95% accuracy. Built using NLP and LLM tooling with a Retrieval-Augmented Generation (RAG) pipeline to surface relevant NHS information from natural language queries.',

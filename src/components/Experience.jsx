@@ -2,6 +2,19 @@ import { motion } from 'framer-motion'
 
 const jobs = [
   {
+    role: 'Founder & Lead Developer',
+    company: 'OvationX',
+    location: 'Liverpool, UK',
+    period: 'Jun 2026 – Present',
+    icon: '🚀',
+    bullets: [
+      'Architected and built a multi-venture digital ecosystem spanning custom web development services, D2C e-commerce (KRATE), and event-driven community marketing (Afters).',
+      'Engineered high-performance React 18 frontends featuring complex Zustand state management, custom 3D viewers (Three.js), and custom-engineered canvas physics animations.',
+      'Developed secure, edge-native serverless backends using Cloudflare Workers, Cloudflare D1 (edge SQLite), custom cryptographic authentication (Web Crypto API), and Stripe payment gateway integrations.',
+      'Configured and maintained scalable domain, DNS, and secure email routing architectures across multiple domains with full CI/CD deployment automation.',
+    ],
+  },
+  {
     role: 'Front of House',
     company: 'Subway',
     location: 'Liverpool, UK',

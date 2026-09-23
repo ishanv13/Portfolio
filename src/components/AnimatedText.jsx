@@ -1,34 +1,76 @@
-import { motion } from 'framer-motion';
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
-export const BlurText = ({ text, className = '' }) => {
-  const words = text.split(' ');
-  
-  return (
-    <div className={className}>
-      {words.map((word, i) => (
-        <motion.span
-          key={i}
-          initial={{ filter: 'blur(10px)', opacity: 0 }}
-          animate={{ filter: 'blur(0px)', opacity: 1 }}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
-          className="inline-block mr-2"
-        >
-          {word}
-        </motion.span>
-      ))}
-    </div>
-  );
-};
+/**
+ * AnimatedText - character-by-character scroll-reveal.
+ * Each char fades from opacity 0.2 to 1 as scroll progresses.
+ * Words are wrapped in inline-blocks to prevent breaking mid-word.
+ */
+export default function AnimatedText({ text, className = '', style = {} }) {
+  const ref = useRef(null)
 
-export const FadeInText = ({ text, className = '' }) => {
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start 0.8', 'end 0.2'],
+  })
+
+  const words = text.split(' ')
+  let charIndex = 0
+  const totalChars = text.length
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className={className}
-    >
-      {text}
-    </motion.div>
-  );
-};
+    <p ref={ref} className={className} style={style} aria-label={text}>
+      {words.map((word, wordI) => {
+        const wordChars = word.split('')
+        return (
+          <span key={wordI} style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+            {wordChars.map((char, charI) => {
+              const start = charIndex / totalChars
+              const end = (charIndex + 1) / totalChars
+              charIndex++
+              return (
+                <Char
+                  key={charI}
+                  char={char}
+                  scrollYProgress={scrollYProgress}
+                  start={start}
+                  end={end}
+                />
+              )
+            })}
+            {wordI < words.length - 1 && (() => {
+              const start = charIndex / totalChars
+              const end = (charIndex + 1) / totalChars
+              charIndex++
+              return (
+                <Char
+                  key="space"
+                  char=" "
+                  scrollYProgress={scrollYProgress}
+                  start={start}
+                  end={end}
+                />
+              )
+            })()}
+          </span>
+        )
+      })}
+    </p>
+  )
+}
+
+function Char({ char, scrollYProgress, start, end }) {
+  const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1])
+
+  return (
+    <span style={{ position: 'relative', display: 'inline-block' }}>
+      {/* invisible placeholder to reserve space */}
+      <span style={{ visibility: 'hidden' }}>{char === ' ' ? '\u00A0' : char}</span>
+      <motion.span
+        style={{ opacity, position: 'absolute', left: 0, top: 0 }}
+      >
+        {char === ' ' ? '\u00A0' : char}
+      </motion.span>
+    </span>
+  )
+}

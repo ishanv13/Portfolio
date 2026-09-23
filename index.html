@@ -2,12 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/images/logo.ico" />
+    <link rel="icon" type="image/png" href="/images/ishanprofile.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ishan Verma · Portfolio</title>
+    <title>Ishan Verma - Data Analyst & Entrepreneur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>
+    <div id="error-log" style="color:red; background: black; z-index:9999; position:absolute; top:0; left:0; font-family: monospace;"></div>
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        document.getElementById('error-log').innerHTML += msg + '<br/>';
+      };
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

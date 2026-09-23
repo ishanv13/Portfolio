@@ -1,41 +1,26 @@
-import { useState, useEffect } from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import Skills from './components/Skills'
-import Qualification from './components/Qualification'
-import Organizations from './components/Organizations'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import ScrollTop from './components/ScrollTop'
+import Navbar from './components/Navbar'
+import HeroSection from './components/HeroSection'
+import MarqueeSection from './components/MarqueeSection'
+import AboutSection from './components/AboutSection'
+import ExperienceSection from './components/ExperienceSection'
+import EducationSection from './components/EducationSection'
+import ProjectsSection from './components/ProjectsSection'
+import SkillsSection from './components/SkillsSection'
+import ContactSection from './components/ContactSection'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-  })
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', darkMode)
-  }, [darkMode])
-
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <Header darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Qualification />
-        <Organizations />
-        <Contact />
-      </main>
-      <Footer />
-      <ScrollTop />
-    </div>
+    <main className="bg-[#0C0C0C] min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <MarqueeSection />
+      <AboutSection />
+      <ExperienceSection />
+      <EducationSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <ContactSection />
+    </main>
   )
 }
 

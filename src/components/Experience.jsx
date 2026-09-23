@@ -78,8 +78,10 @@ const jobs = [
     period: 'Jun 2024 – Sep 2024',
     icon: '📈',
     bullets: [
-      'Designed and executed lead analysis pipelines using Python and Excel, increasing qualified lead conversion by ~60%',
-      'Worked with senior stakeholders to interpret data trends and align product positioning with market demand',
+      'Led end-to-end data analysis for customer acquisition pipelines, building ETL routines to evaluate lead demographics, conversion rates, and drop-off stages across the sales funnel',
+      'Analysed prospective institutional client datasets to identify high-value target segments, developing data-driven outreach strategies that boosted qualified lead volume by ~60%',
+      'Partnered with senior leadership to present weekly pipeline performance dashboards, providing actionable recommendations that improved deal qualification and lifted client acquisition by ~20%',
+      'Maintained CRM data integrity and activity tracking across 500+ client touchpoints, conducting cohort and trend analyses to refine commercial targeting strategies',
     ],
   },
   {

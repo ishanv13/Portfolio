@@ -30,6 +30,7 @@ const projects = [
     tags: ['NestJS', 'PostgreSQL', 'Cloudflare Workers AI', 'RAG', 'Llama 3.1', 'TypeScript', 'WhatsApp API', 'Razorpay', 'OCR'],
     github: null,
     live: 'https://textrail.ishanv2003.workers.dev',
+    liveLabel: 'Live Demo →',
     featured: false,
     icon: '🧾',
     date: '2026',
@@ -37,8 +38,8 @@ const projects = [
   {
     title: 'NHS Healthcare Assistant – AI Solution',
     description:
-      'AI-powered healthcare assistant that reduced manual review workload by 70% and achieved 95% accuracy. Built using NLP and LLM tooling with a Retrieval-Augmented Generation (RAG) pipeline to surface relevant NHS information from natural language queries.',
-    tags: ['Python', 'NLP', 'RAG', 'LLM', 'Generative AI'],
+      'Clinical RAG assistant in Python that reduced manual review workload by 70% and achieved 95% response accuracy. Built a high-performance semantic retrieval pipeline with token-aware document chunking, Sentence Transformers embeddings, and ChromaDB vector storage. Engineered step-back prompting and hybrid retrieval strategies to eliminate hallucination risks. Implemented adaptive multi-persona response formatting for medical professionals vs patients.',
+    tags: ['Python', 'NLP', 'RAG', 'ChromaDB', 'LLM', 'Sentence Transformers'],
     github: 'https://github.com/ishanv13/NHS-Healthcare-Assistant',
     live: null,
     featured: false,
@@ -48,8 +49,8 @@ const projects = [
   {
     title: 'Customer Behaviour Analytics – Predictive Modelling',
     description:
-      'End-to-end analytics project following CRISP-DM methodology for e-commerce review prediction. Evaluated multiple classification models against business performance metrics and translated outputs into commercial recommendations.',
-    tags: ['Python', 'scikit-learn', 'CRISP-DM', 'Classification', 'pandas'],
+      'Full-cycle analytics project following CRISP-DM on multi-table e-commerce data; engineered 20+ features spanning transaction frequency, monetary spend, review sentiments, and engagement recency. Trained and benchmarked Random Forest, GBDT, and Logistic Regression models, tuning hyperparameters to optimise precision, recall, and ROC-AUC for customer churn identification. Synthesised findings in Tableau dashboards with targeted retention recommendations linked to commercial ROI.',
+    tags: ['Python', 'scikit-learn', 'CRISP-DM', 'Random Forest', 'Tableau', 'pandas'],
     github: 'https://github.com/ishanv13/Nile-eCommerce-Review-Prediction',
     live: null,
     featured: false,
@@ -59,8 +60,8 @@ const projects = [
   {
     title: 'Loan Approval Model Evaluation',
     description:
-      'Designed and executed an A/B experiment comparing a new predictive model against an existing baseline using R. Ran t-tests and recall analyses; produced data-driven recommendations to reduce financial risk and improve model accuracy.',
-    tags: ['R', 'A/B Testing', 'Hypothesis Testing', 'Statistical Analysis'],
+      'Designed and executed a structured A/B experimentation framework in R, evaluating a new credit risk scoring model against an institutional baseline across treatment and control cohorts. Conducted two-sample t-tests and recall analyses, verifying a ~31% reduction in Type II errors and a ~34% increase in F1 Score. Quantified risk trade-offs and authored a technical report on model governance, risk thresholds, and expected portfolio loss reductions.',
+    tags: ['R', 'A/B Testing', 'Hypothesis Testing', 'Statistical Analysis', 'Risk Analytics'],
     github: 'https://github.com/ishanv13/LoanApprovalModel_EffectivenessAnalysis',
     live: null,
     featured: false,
@@ -177,7 +178,7 @@ const ProjectCard = ({ project, index }) => (
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-alt font-medium transition-colors"
         >
-          🔗 View Report →
+          🔗 {project.liveLabel || 'View Report →'}
         </a>
       )}
     </div>

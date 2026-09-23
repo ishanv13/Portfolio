@@ -10,7 +10,7 @@ const projects = [
     live: null,
     featured: true,
     icon: '📊',
-    date: 'Apr 2025',
+    date: 'Apr–May 2026',
   },
   {
     title: 'KRATE – AI-Operated Startup (Co-Founder)',
@@ -22,6 +22,17 @@ const projects = [
     featured: true,
     icon: '🎪',
     date: '2026 – Present',
+  },
+  {
+    title: 'TexTrail – AI Compliance SaaS',
+    description:
+      'Full-stack multi-tenant vertical SaaS for Indian garment exporters that auto-generates export customs paperwork (LUT, shipping bill, commercial invoice, packing list) from a single shipment entry via server-rendered headless Chromium. AI compliance chatbot combining Cloudflare Workers AI (Llama 3.1 8B) with a custom bilingual English/Tamil per-exporter memory graph; enforced deterministic zero-hallucination guardrails. Enterprise multi-tenant isolation in NestJS/PostgreSQL using Postgres Row-Level Security and dual-Prisma service layers. Integrated Tesseract OCR for certificate validity extraction, automated WhatsApp expiry alerts, and Razorpay subscription billing.',
+    tags: ['NestJS', 'PostgreSQL', 'Cloudflare Workers AI', 'RAG', 'Llama 3.1', 'TypeScript', 'WhatsApp API', 'Razorpay', 'OCR'],
+    github: null,
+    live: 'https://textrail.ishanv2003.workers.dev',
+    featured: false,
+    icon: '🧾',
+    date: '2026',
   },
   {
     title: 'NHS Healthcare Assistant – AI Solution',
@@ -65,7 +76,7 @@ const projects = [
     live: 'https://drive.google.com/file/d/1kLWepIUkvTanyeAEcBC_DrcthclbvsWQ/view?usp=sharing',
     featured: false,
     icon: '💼',
-    date: 'May 2025',
+    date: 'May–Aug 2025',
   },
   {
     title: 'EventsGo – Ticketing Platform Analysis',

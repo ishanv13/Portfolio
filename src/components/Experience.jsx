@@ -2,16 +2,28 @@ import { motion } from 'framer-motion'
 
 const jobs = [
   {
-    role: 'Founder & Lead Developer',
+    role: 'Founder & Lead Digital Delivery',
     company: 'OvationX',
     location: 'Liverpool, UK',
-    period: 'Jun 2026 – Present',
+    period: 'Jun 2024 – Present',
     icon: '🚀',
     bullets: [
-      'Architected and built a multi-venture digital ecosystem spanning custom web development services, D2C e-commerce (KRATE), and event-driven community marketing (Afters).',
-      'Engineered high-performance React 18 frontends featuring complex Zustand state management, custom 3D viewers (Three.js), and custom-engineered canvas physics animations.',
-      'Developed secure, edge-native serverless backends using Cloudflare Workers, Cloudflare D1 (edge SQLite), custom cryptographic authentication (Web Crypto API), and Stripe payment gateway integrations.',
-      'Configured and maintained scalable domain, DNS, and secure email routing architectures across multiple domains with full CI/CD deployment automation.',
+      'Led business analysis and data requirements scoping for SME clients, translating operational objectives into structured functional specifications and robust digital platforms',
+      'Constructed interactive client reporting dashboards and web analytics pipelines, surfacing traffic acquisition patterns, user engagement metrics, and conversion funnels to executive stakeholders',
+      'Managed project delivery metrics across the full software development lifecycle, using data-backed milestones to track velocity, resource allocation, and budget compliance across multiple client accounts',
+      'Conducted systematic quality assurance, website performance benchmarking, and SEO audit analytics, delivering structured presentations to executive leadership',
+    ],
+  },
+  {
+    role: 'Founder & Analytics Lead',
+    company: 'KRATE',
+    location: 'Liverpool, UK',
+    period: 'Oct 2024 – Present',
+    icon: '🛍️',
+    bullets: [
+      'Founded and scaled a direct-to-consumer e-commerce brand; built quantitative data tracking across customer funnels, browsing telemetry, and checkout transactions to analyse user conversion bottlenecks',
+      'Modelled unit economics, product gross margin elasticity, and print-on-demand supplier cost structures, executing data-driven pricing strategies that maintained healthy gross margins with zero inventory risk',
+      'Designed and executed continuous A/B testing on kit-builder product layouts and bundles, utilising visitor event data to drive measurable uplifts in average order value (AOV) and customer retention',
     ],
   },
   {

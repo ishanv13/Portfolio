@@ -86,9 +86,9 @@ const categories = [
     skills: [
       { name: 'Python (pandas, NumPy, scikit-learn)', percentage: 85 },
       { name: 'SQL & PostgreSQL', percentage: 85 },
-      { name: 'R Language', percentage: 90 },
-      { name: 'HTML / CSS', percentage: 70 },
-      { name: 'C / C++', percentage: 60 },
+      { name: 'TypeScript / JavaScript (ES6+)', percentage: 80 },
+      { name: 'R Language', percentage: 80 },
+      { name: 'React 18 / Next.js 15', percentage: 75 },
     ],
   },
   {
@@ -106,10 +106,11 @@ const categories = [
     icon: '🤖',
     title: 'AI & Engineering',
     skills: [
-      { name: 'Prompt Engineering & Generative AI', percentage: 80 },
-      { name: 'NLP & RAG Pipelines', percentage: 65 },
-      { name: 'REST APIs & Data Pipelines', percentage: 75 },
-      { name: 'Git & Version Control', percentage: 75 },
+      { name: 'Multi-Agent Orchestration (Claude Code)', percentage: 85 },
+      { name: 'LLM Engineering & RAG Pipelines', percentage: 80 },
+      { name: 'Cloudflare Workers / Edge Serverless', percentage: 75 },
+      { name: 'REST APIs, ETL & Data Pipelines', percentage: 80 },
+      { name: 'Vector Databases (ChromaDB)', percentage: 70 },
     ],
   },
   {
